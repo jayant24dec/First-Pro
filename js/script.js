@@ -34,3 +34,26 @@ document.querySelectorAll('a').forEach(links =>{
     }
 
 });
+
+// Form submission handling
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Use the Fetch API to submit the form
+    fetch(this.action, {
+        method: this.method,
+        body: new FormData(this),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            alert('Message sent successfully!');
+            this.reset(); // Reset the form fields
+        } else {
+            alert('There was a problem sending your message.');
+        }
+    }).catch(error => {
+        alert('There was a problem sending your message.');
+    });
+});

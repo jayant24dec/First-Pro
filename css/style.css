@@ -10,7 +10,7 @@
     box-sizing: border-box;
     outline: none; border:none;
     text-decoration: none;
-    text-transform: capitalize;
+    text-transform: none;
     transition: all .2s linear;
     line-height: 1.5;
 }
@@ -304,7 +304,10 @@ header .follow a:hover{
     width:85%;
 }
 .about .row-2 .skills .progress:nth-child(5) .bar span{
-    width:55%;
+    width:50%;
+}
+.about .row-2 .skills .progress:nth-child(6) .bar span{
+    width:40%;
 }
 
 
